@@ -1,0 +1,28 @@
+{
+  "name": "fylo-landing-page",
+  "version": "1.0.0",
+  "description": "landing page designed by front end mentor and built by me",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veeru-neerukonda/fylo-landing-page.git"
+  },
+  "keywords": [],
+  "author": "Sriveer Neerukonda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veeru-neerukonda/fylo-landing-page/issues"
+  },
+  "homepage": "https://github.com/veeru-neerukonda/fylo-landing-page#readme",
+  "dependencies": {
+    "parcel": "^2.7.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0"
+  }
+}
