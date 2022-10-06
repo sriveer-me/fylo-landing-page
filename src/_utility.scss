@@ -1,0 +1,103 @@
+.wrapper{
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Raleway', sans-serif;;
+    font-weight: 700;
+    font-size: 1rem;
+
+    padding: 0.8rem 0;
+}
+
+.btn-primary{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: $neutral-100;
+    background-color: $color-blue;
+
+    border-radius: 3px;
+
+    text-decoration: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.btn-secondary{
+    color: $color-blue-alternate;
+    text-underline-offset: .6rem;
+}
+
+.h1{
+    font-family: 'Raleway', sans-serif;
+    color: $color-primary;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+
+.p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.text-column-flex{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+}
+
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input{
+        width: 80%;
+
+        border-radius: 3px;
+        border: 2px solid $color-primary;
+
+        &.border-none{
+            border: 2px solid rgba(#000000,0.0);
+        }
+
+        font-family: 'Open Sans', sans-serif;
+        color: rgba($color-primary,0.6);
+        font-size: 1rem;
+        padding: .6rem 1.2rem;
+    }
+    input:focus{
+        outline: 0px;
+    }
+    .error-message{
+        display: none;
+        width: 80%;
+    }
+}
+
+.input-group.error{
+    input{
+        border: 2px solid red;
+        color: rgba(red,0.7);
+    }
+    .error-message{
+        display: block;
+        color: red;
+        font-family: 'Open Sans', sans-serif;
+        font-size: .8rem;
+        padding: .2rem;
+    }
+}
+
+ion-icon{
+    color: white;
+}
