@@ -244,12 +244,12 @@ section.usuage{
 section.get-early-access{
     background-color: $color-primary-alternate;
     @extend .wrapper;
-    padding-top: 3.2rem;
-    padding-bottom: 3.2rem;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
     
     @include for-desktop-up{
-        padding-top: 6rem;
-        padding-bottom: 5rem;
+        padding-top: 12rem;
+        padding-bottom: 10rem;
 
         .columns{
             display: flex;
