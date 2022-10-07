@@ -1,6 +1,16 @@
 .wrapper{
     padding-left: 1.2rem;
     padding-right: 1.2rem;
+    @include for-desktop-up{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.center-constrainer{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn{
@@ -17,6 +27,10 @@
 
 .btn-primary{
     width: 80%;
+    @include for-desktop-up{
+        width: auto;
+    }
+    
     margin-left: auto;
     margin-right: auto;
 
@@ -40,12 +54,22 @@
     text-align: center;
     font-size: 1.2rem;
     line-height: 2.2rem;
+
+    @include for-desktop-up{
+        font-size: 1.4rem;
+        line-height: 2.35rem;
+        text-align: left; 
+    }
 }
 
 .p{
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     text-align: center;
+    @include for-desktop-up{
+        font-size: 1.15rem;
+        text-align: left;
+    }
 }
 
 .text-column-flex{
@@ -62,6 +86,9 @@
 
     input{
         width: 80%;
+        @include for-desktop-up{
+            width: 100%;
+        }
 
         border-radius: 3px;
         border: 2px solid $color-primary;

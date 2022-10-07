@@ -1,3 +1,4 @@
+@import './mixins';
 @import './variables';
 @import './utility';
 
@@ -14,44 +15,76 @@ image{
     width: 100%;
 }
 
-body{
-    font-size: 62.5%;
-}
-
 header{
     display: flex;
     justify-content: space-between;
+    
     @extend .wrapper;
+    @include for-desktop-up{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     padding-top: 1.6rem;
     margin-bottom: 1.8rem;
+    @include for-desktop-up{
+        padding-top: 2.5rem;
+        margin-bottom: 3.5rem;
+    }
 
     nav{
         display: flex;
+        
         column-gap: .6rem;
+        @include for-desktop-up{
+            column-gap: 1.6rem;
+        }
+
         align-items: center;
     }
 
     img{
         width: 135px;
+        @include for-desktop-up{
+            width: 200px;
+        }
     }
 
     nav a{
-        font-family: 'Open Sans', sans-serif;
+        @extend .p;
         color: $color-primary;
         text-decoration: none;
         text-transform: capitalize;
-        font-size: 1rem;
     }
 }
 
 section.hero{
     display: flex;
     flex-direction: column;
+    @include for-desktop-up{
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2rem;
+    }
+
     @extend .wrapper;
+    @include for-desktop-up{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .text-column{
         order: 2;
         margin-top: 2.2rem;
+        @include for-desktop-up{
+            order: 1;
+            margin-top: 0;
+
+            flex: 1 1 50%;
+        }
+
         @extend .text-column-flex;
 
         h1{
@@ -65,12 +98,24 @@ section.hero{
         .get-started-wrapper{
             display: flex;
             flex-direction: column;
+            @include for-desktop-up{
+                flex-direction: row;
+                column-gap: 1.2rem;
+            }
             row-gap: .6rem;
+
+            @include for-desktop-up{
+                .input-group{ flex: 1 1 100%;}
+                a{ flex: 1 1 50%; }
+            }
         }
     }
 
     .image-column{
         order: 1;
+        @include for-desktop-up{
+            width: 600px;
+        }
     }
 }
 
