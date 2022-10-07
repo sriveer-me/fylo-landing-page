@@ -48,12 +48,15 @@
     background-color: rgba($color-blue,0.8)
 }
 
+.btn-primary:active{
+    transform: scale(0.95);
+}
+
 .btn-secondary{
     color: $color-blue-alternate;
     text-underline-offset: .6rem;
     @include for-desktop-up{
         display: inline-block;
-        
     }
 }
 
