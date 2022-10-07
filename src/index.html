@@ -38,10 +38,10 @@
                 <p>Fylo stores your most important files in one secure location. Access them whenever you need, share and collaborate with friends, family and Co-Workers.</p>
                 <div class="get-started-wrapper">
                     <div class="input-group">
-                        <input type="email" placeholder="Enter your email.">
+                        <input type="email" placeholder="Enter your email." id="get-started-input">
                         <div class="error-message">Please check your email.</div>
                     </div>
-                    <a href="javascript:void(0)" class="btn btn-primary">Get Started</a>
+                    <a href="javascript:void(0)" class="btn btn-primary" data-for-id="get-started-input">Get Started</a>
                 </div>
             </div>
             <img class="image-column" src="./images/illustration-1.svg" alt="illustartion of storing and retrieving data">
@@ -85,9 +85,9 @@
                     <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you</p>
                 </div>
                 <div class="input-group">
-                    <input type="email" class="border-none" placeholder="Enter your email.">
-                    <div class="error-message">Please check your email.</div>
-                    <a href="javascript:void(0)" class="btn btn-primary">Get Started For Free</a>
+                    <input id="get-early-access-input" type="email" class="border-none" placeholder="Enter your email.">
+                    <div class="error-message color-white">Please check your email.</div>
+                    <a href="javascript:void(0)" class="btn btn-primary" data-for-id="get-early-access-input">Get Started For Free</a>
                 </div>
             </div>
         </section>
@@ -128,5 +128,24 @@
 
     <!-- Ion Icons -->
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let submitButtons = document.getElementsByClassName('btn-primary');
+        submitButtons.forEach(function(button){
+            button.addEventListener('click',function(e){
+                let inputInQuestion = document.getElementById(e.target.dataset.forId);
+                let inputGroupInQuestion = inputInQuestion.parentElement;
+
+                let enteredText = inputInQuestion.value;
+                if(enteredText.match("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")){
+                    
+                    inputGroupInQuestion.classList.remove('error');
+                }
+                else{
+                    inputGroupInQuestion.classList.add('error');
+                }
+            })
+        })
+    </script>
 </body>
 </html>
