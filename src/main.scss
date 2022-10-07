@@ -121,27 +121,49 @@ section.hero{
 
 section.usuage{
     margin-top: 3.6rem;
-    
+
     .img-curve{
         display: block;
         width: 100%;
     }
+
+    .desktop-full-width-wrapper{
+        background-color: $neutral-200;
+    }
+
     .columns{
         display: flex;
         flex-direction: column;
-        background-color: $neutral-200;
+        @include for-desktop-up{
+            flex-direction: row;
+            align-items: center;
+            column-gap: 2rem;
+        }
+
         padding-bottom: 3.6rem;
         @extend .wrapper;
+        @include for-desktop-up{
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .text-column{
         order: 2;
+        @include for-desktop-up{
+            order: 1;
+        }
+
         @extend .text-column-flex;
         h1{
             @extend .h1;
             margin-top: 3.2rem;
             line-height: 1.8rem;
             text-align: center;
+            @include for-desktop-up{
+                text-align: left;
+            }
         }
         p{
             @extend .p;
@@ -154,6 +176,9 @@ section.usuage{
         width: 325px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         margin: 0 auto;
+        @include for-desktop-up{
+            margin: 0;
+        }
 
         border-radius: 3px;
 
@@ -180,6 +205,9 @@ section.usuage{
                 display: block;
                 border-radius: 100%;
                 width: 2.8rem;
+                @include for-desktop-up{
+                    width: 3.6rem;
+                }
             }
             figcaption{
                 display: flex;
@@ -207,6 +235,9 @@ section.usuage{
         order: 1;
         display: block;
         width: 100%;
+        @include for-desktop-up{
+            width: 600px;
+        }
     }
 }
 

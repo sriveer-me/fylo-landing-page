@@ -46,6 +46,10 @@
 .btn-secondary{
     color: $color-blue-alternate;
     text-underline-offset: .6rem;
+    @include for-desktop-up{
+        display: inline-block;
+        
+    }
 }
 
 .h1{
